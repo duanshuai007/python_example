@@ -1,0 +1,12 @@
+[Unit]
+Description=bigfish http server Service
+After=network.target
+
+[Service]
+Type=simple
+RestartSec=5
+ExecStart=/usr/bin/python3 /home/duanshuai/httpserver/server.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
